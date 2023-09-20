@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <br>
+    <br>
+<table style="background-color:green;">
+<form method="post" action="register">
+    <tr>
+{% csrf_token %}
+    <td><input type="text" name="username" placeholder="username"></td>
+    </tr>
+    <tr>
+        <td><input type="text" name="firstname" placeholder="First Name"></td>
+    </tr>
+      <tr>
+        <td><input type="text" name="lastname" placeholder="last Name"></td>
+    </tr>
+      <tr>
+        <td><input type="email" name="email" placeholder=" E-mail"></td>
+    </tr>
+      <tr>
+        <td><input type="password" name="password" placeholder="Password"></td>
+    </tr>
+      <tr>
+        <td><input type="password" name="password2" placeholder="Conform Password"></td>
+    </tr>
+    <tr><td><input type="submit"></td></tr>
+</form>
+</table>
+    {% for i in messages %}
+    <h3>{{i}}</h3>
+    {% endfor %}
+</center>
+
+
+</body>
+</html>
